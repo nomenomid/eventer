@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
@@ -62,6 +63,22 @@ app.put("/eventer/:collection/:id", function(request, response) {
             return error ? console.log(error) : response.send(result);    
         });
     });
+=======
+/* globals readFile */
+
+var fsp = require("./lib/fs.promise.js");
+var express = require("express");
+var app = express();
+var dataFile = "./data/states.json";
+var port = process.env.PORT || 5000;
+
+app.use(express.static("site"));
+
+app.get("/states", function(request, response) {
+    fsp.readFile(dataFile)
+        .then(JSON.parse)
+        .then(response.send.bind(response));
+>>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
 });
 
 app.listen(port, function() {

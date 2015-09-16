@@ -1,0 +1,430 @@
+/* basic styles */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body, body *:not(input) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 150vh;
+    margin: 0 auto;
+}
+
+/* header formatting */
+
+header {
+    background-color: #1F1D0E;
+    background-color: rgba(49, 65, 82, 0.95);
+    overflow: hidden;
+    min-width: 150vh;
+}
+
+header .container {
+    text-align: right;
+}
+
+header h1 {
+    font: bold 5vh/2 "Cinzel", Sans-Serif;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 0.4vh #000;
+    padding-left: 15vh;
+    float: left;
+}
+
+header h1 a::before {
+    content: "z";
+    position: absolute;
+    font: 10vh/1 "Stateface";
+    transform: translateY(-10%) translateX(-110%);
+}
+
+header ul {
+    display: inline-block;
+    height: 5vh;
+    line-height: 5vh;
+    padding: 2.5vh 0;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    font: normal 2vh/1 Lato, Sans-Serif;
+    vertical-align: bottom;
+    padding: 0 1.5vh;
+}
+
+header ul li a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* center section formatting */
+
+main {
+    height: 84vh;
+}
+
+/* configurations is the first section that is revealed onclick via 3d transforms */
+
+#configs {
+    height: 12vh;
+    padding: 4vh 0 3vh;
+    position: relative;
+    perspective: 100vh;
+}
+
+#configs input[type = "checkbox"] {
+    display: none;
+}
+
+#configs > label {
+    width: 100%;
+    display: inline-block;
+    border: 0.2vh solid #B1C2D4;
+    border-radius: 1vh;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, #F7FBFF 0%, #FDFFFF 100%);
+}
+
+#configs > label::before {
+    content:"\f0d0";
+    font: normal 3.5vh/5vh "Font Awesome";
+    color: #4D5F72;
+}
+
+#configs > label:hover {
+    background-image: linear-gradient(to bottom, #EFF7FF 0%, #F7FBFF 100%);
+}
+
+#configs > label,
+#controls {
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    transition: transform linear 0.5s;
+}
+
+#controls {
+    position: absolute;
+    top: 4vh;
+    left: 0;
+    transform: rotateX(-180deg);
+    border: 0.2vh solid #B1C2D4;
+    border-radius: 1vh;
+    padding: 0 4vh;
+    background-color: #fafafa;
+    white-space: nowrap;
+}
+
+#controls label {
+    position: absolute;
+    width: 4vh;
+    height: 5vh;
+    top: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#controls label:nth-of-type(2) {
+    left: auto;
+    right: 0;
+}
+
+#controls label:nth-of-type(3) {
+    z-index: -1;
+}
+
+#controls label::before {
+    content:"\f057";
+    font: normal 2.2vh/5vh "Font Awesome";
+    color: #ddd;
+}
+
+#controls label:hover::before {
+    color: #aaa;
+}
+
+#controls label:hover ~ :not(label) {
+    opacity: 0.3;
+}
+
+#controls label:hover ~ div > input {
+    background-color: inherit;
+}
+
+#controls label:hover ~ label::before {
+    color: #aaa;
+}
+
+#controls label:nth-of-type(2):hover + label {
+    z-index: 1;
+}
+
+#controls > div[id $= "Group"] {
+    display: inline-block;
+}
+
+#controls > div + div[id $= "Group"] {
+    margin-left: 2vh;
+}
+
+#controls input {
+    border: 0;
+    color: rgb(49, 65, 82);
+    width: 12vh;
+    font: normal 2vh/3vh "Open Sans";
+    outline: 0;
+    background-color: #fff;
+    border-radius: 0.5vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0.2vh 0.5vh;
+}
+
+#controls input:focus {
+    border-bottom: 0.2vh solid rgb(8, 138, 8);
+}
+
+#controls input[id ^= "min"]{
+    margin-left: 1vh;
+}
+
+#controls span + input {
+    margin-left: 0.5vh;
+}
+
+#controls input.income {
+    width: 7vh;
+}
+
+#controls input.population {
+    width: 10vh;
+}
+
+#controls input.area {
+    width: 10.2vh;
+}
+
+#controls span {
+    font: normal 2vh/5vh "Open Sans";
+    color: rgb(190, 190, 190);
+    text-shadow: 0.2vh 0.2vh 0.2vh #fff;
+}
+
+#controls .sort {
+    color: rgb(49, 65, 82);
+    display: inline-block;
+}
+
+#controls .sort + .sort {
+    margin-left: 1vh;
+}
+
+#controls .sort button {
+    margin: 0;
+    border: 0;
+    background: 0;
+    outline: 0;
+    cursor: pointer;
+    width: 2vh;
+}
+
+#controls .sort button::before {
+    content:"\f175";
+    font-family: "Font Awesome";
+    color: rgba(8, 138, 8, 0.2);
+    font-weight: bold;
+    position: relative;
+    right: 0.25vh;
+}
+
+#controls .sort button:last-of-type::before,
+#controls .sort button.selected:last-of-type::before {
+    content:"\f176";
+    color: rgba(255, 128, 0, 0.2);
+}
+
+#controls .sort button:first-of-type:hover::before,
+#controls .sort button.selected:first-of-type::before {
+    color: rgba(8, 138, 8, 1);
+}
+
+#controls .sort button:last-of-type:hover::before,
+#controls .sort button.selected:last-of-type::before{
+    color: rgba(255, 128, 0, 1);
+}
+
+#configs input[type = "checkbox"]:checked + label {
+    transform: rotateX(180deg);
+}
+
+#configs input[type = "checkbox"]:checked ~ #controls {
+    transform: rotateX(0deg);
+}
+
+/* states block contains 50 states and D.C. */
+
+#states {
+    height: 67.6vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#states > input[type = "checkbox"] {
+    display: none;
+}
+
+.state {
+    height: 5.2vh;
+    position: relative;
+}
+
+.state h2 {
+    font: normal 2.9vh/5.2vh Roboto;
+    width: 37.5vh;
+    letter-spacing: 0.2vh;
+    position: relative;
+}
+
+.state h2 a {
+    padding-left: 6vh;
+    color: rgb(19, 30, 42);
+}
+
+.state h2 a::before {
+    content: attr(data-stateface-letter);
+    position: absolute;
+    left: 0;
+    width: 6vh;
+    font: 0.9em/5.2vh Stateface;
+    text-align: center;
+    color: rgb(108, 135, 164);
+}
+
+.state h2 a {
+    display: block;
+}
+
+.state h2 a:hover {
+    background-color: rgba(49, 65, 82, 0.1);
+}
+
+.state .info {
+    position: absolute;
+    bottom: 7.2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3vh 3vh 3vh 17vh;
+    border: 0.4vh solid rgb(108, 135, 164);
+    background-color: #fff;
+    border-radius: 1vh;
+    z-index: 1;
+    display: none;
+}
+
+.state .info::before,
+.state .info::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 2vh 2vh 0 2vh;
+    border-color: rgb(108, 135, 164) transparent transparent transparent;
+    bottom: -2vh;
+    left: 50%;
+    margin-left: -2vh;
+}
+
+.state .info::after {
+    border-top-color: #fff;
+    bottom: -1.5vh;
+}
+
+.state .info > .map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.state .info > .map::before {
+    content: attr(data-stateface-letter);
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+    top: 50%;
+    left: 0;
+    margin-top: -9vh;
+    font: 12vh/15vh Stateface;
+    color: rgb(108, 135, 164);
+    text-align: center;
+    overflow: hidden;
+}
+
+.state .info .dataPoint {
+    white-space: nowrap;
+    font: normal 2vh/1 "Open Sans";
+    color: rgb(49, 65, 82);
+}
+
+.state .info .dataPoint + .dataPoint {
+    margin-top: 1vh;
+}
+
+.state .info label {
+    font-weight: bold;
+    display: inline-block;
+    text-align: left;
+    width: 15vh;
+}
+
+.state .info label + span {
+    display: inline-block;
+    width: 11vh;
+    text-align: right;
+}
+
+.state .info label + span + span {
+    display: none;
+}
+
+#states > input[type = "checkbox"]:checked ~ .state h2:hover + .info {
+    display: block;
+}
+
+.state.disabled {
+    pointer-events: none;
+}
+
+.state.disabled h2 a,
+.state.disabled h2 a::before {
+    color: #dadada;
+}
+
+footer {
+    padding-top: 0.6vh;
+    background-image: linear-gradient(to bottom, #ccc 0%, #eee 20%);
+    color: rgba(150, 150, 150, 1);
+    font: normal 1.6vh/5.5vh Lato;
+    text-shadow: 0.2vh 0.2vh 0.2vh #fff;
+    text-align: center;
+}
+
+footer::first-letter {
+    font-family: Sans-Serif;
+}

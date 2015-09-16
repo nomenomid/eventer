@@ -1,18 +1,31 @@
 {
+<<<<<<< HEAD
     "name": "event-scheduler",
     "version": "0.0.1",
     "description": "A very basic event scheduling system",
+=======
+    "name": "UI-US-States",
+    "version": "0.0.1",
+    "description": "A simple interactive listing of US states",
+>>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
     "main": "server.js",
     "scripts": {
         "start": "node server.js"    
     },
     "dependencies": {
+<<<<<<< HEAD
         "mongoose": "~4.1.7",
         "express": "~4.13.0",
         "body-parser": "~1.14.0"
     },
     "engines": {
         "node": "~0.12.7"
+=======
+        "express": "~4.13.0"
+    },
+    "engines": {
+        "node": "0.12.7"
+>>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
     },
     "repository": {
         "type": "git",
@@ -23,7 +36,12 @@
         "HTML",
         "CSS",
         "JavaScript",
+<<<<<<< HEAD
         "Backbone"
+=======
+        "Backbone",
+        "Angular"
+>>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
     ],
     "license": "GPL"
 }

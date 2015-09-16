@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The United States</title>
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "../css/reset.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "../css/fonts.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "../css/states.css" />
+    </head>
+    <body>
+        <div class = "wrapper">
+            <header>
+                <div class = "container">
+                    <h1><a href = "../">The United States</a></h1>
+                    <ul>
+                        <li><a href = "../">Home</a></li>
+                        <li><a href = "https://github.com/nomenomid/technical.exercises/tree/master/states" target = "_blank">Source code</a></li>
+                    </ul>
+                </div>
+            </header>
+            <main id = "statesApp">
+                <div class = "container">
+                    <div id = "configs">
+                        <input type = "checkbox" id = "configControl" />
+                        <label for = "configControl"></label>
+                        <div id = "controls">
+                            <label for = "configControl"></label>
+                            <label for = "configControl"></label>
+                            <label for = "configControl"></label>
+                            <div id = "filterGroup">
+                                <span>Filter by:</span>
+                                <input type = "text" id = "name" placeholder = "State name" autocomplete="off"/>
+                                <input type = "text" class = "income" id = "minIncome" placeholder = "min $" autocomplete="off"/>
+                                <input type = "text" class = "income" id = "maxIncome" placeholder = "max $" autocomplete="off"/>
+                                <input type = "text" class = "population" id = "minPopulation" placeholder = "min pop" autocomplete="off"/>
+                                <input type = "text" class = "population" id = "maxPopulation" placeholder = "max pop" autocomplete="off"/>
+                                <input type = "text" class = "area" id = "minArea" placeholder = "min area" autocomplete="off"/>
+                                <input type = "text" class = "area" id = "maxArea" placeholder = "max area" autocomplete="off"/>
+                            </div>
+                            <div id = "orderGroup">
+                                <span>Order by:</span>
+                                <span for = "name" class = "sort">Name<button></button><button class = "desc"></button></span>
+                                <span for = "income" class = "sort">Income<button></button><button class = "desc"></button></span>
+                                <span for = "population" class = "sort">Population<button></button><button class = "desc"></button></span>
+                                <span for = "area" class = "sort">Area<button></button><button class = "desc"></button></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "states">
+                        <input type = "checkbox" id = "showStatesInfo" checked/>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class = "container">
+                    &copy; 2015 &nbsp;Dmitriy A. Nesterkin, Ph.D.
+                </div>
+            </footer>
+        </div>
+        <script type = "text/template" id = "state-template">
+            <h2><a target = "_blank" href = "<%= wikiLink %>" class = "name" data-stateface-letter = "<%= statefaceLetter %>"><%= name %></a></h2>
+            <div class = "info">
+                <span class = "map" data-stateface-letter = "<%= statefaceLetter %>"></span>
+                <div class = "dataPoint">
+                    <label>Population: </label><span><%= $.formatNumber(population, '', 0) %></span><span class = "population"><%= population %></span>
+                </div>
+                <div class = "dataPoint">
+                    <label>Land area: </label><span><%= $.formatNumber(area, '', 0) %></span><span class = "area"><%= area %></span>
+                </div>
+                <div class = "dataPoint">
+                    <label>Median income: </label><span><%= $.formatNumber(income, '$', 0) %></span><span class = "income"><%= income %></span>
+                </div>
+            </div>
+        </script>
+        <script type = "text/javascript" src = "../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type = "text/javascript" src = "../bower_components/underscore/underscore-min.js"></script>
+        <script type = "text/javascript" src = "../bower_components/backbone/backbone.js"></script>
+        <script type = "text/javascript" src = "../bower_components/cocktail/Cocktail.js"></script>
+        <script type = "text/javascript" src = "../lib/jquery.onlyNumeric.js"></script>
+        
+        <script type = "text/javascript" src = "./js/lib/patchBackbone.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.comparators.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.formatNumber.js"></script>
+        
+        <script type = "text/javascript" src = "./js/models/stateModel.js"></script>
+        <script type = "text/javascript" src = "./js/collections/statesCollection.js"></script>
+        
+        <script type = "text/javascript" src = "./js/views/ConfigsFilterMixin.js"></script>
+        <script type = "text/javascript" src = "./js/views/ConfigsOrderMixin.js"></script>
+        <script type = "text/javascript" src = "./js/views/ConfigsView.js"></script>
+        <script type = "text/javascript" src = "./js/views/StateView.js"></script>
+        <script type = "text/javascript" src = "./js/views/MainView.js"></script>
+        
+        <script type = "text/javascript" src = "./js/statesApp.js"></script>
+    </body>
+</html>

@@ -1,0 +1,511 @@
+[
+    {
+        "name": "Alabama",
+        "abbreviation": "AL",
+        "population": 4849000,
+        "income": 41657,
+        "area": 52419,
+        "statefaceLetter": "B",
+        "wikiLink": "https://en.wikipedia.org/wiki/Alabama"
+    },
+    
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "population": 736732,
+        "income": 70004,
+        "area": 663300,
+        "statefaceLetter": "A",
+        "wikiLink": "https://en.wikipedia.org/wiki/Alaska"
+    },
+    
+    {
+        "name": "Arizona",
+        "abbreviation": "AZ",
+        "population": 6731000,
+        "income": 49774,
+        "area": 113998,
+        "statefaceLetter": "D",
+        "wikiLink": "https://en.wikipedia.org/wiki/Arizona"
+    },
+    
+    {
+        "name": "Arkansas",
+        "abbreviation": "AR",
+        "population": 2966000,
+        "income": 40531,
+        "area": 53179,
+        "statefaceLetter": "C",
+        "wikiLink": "https://en.wikipedia.org/wiki/Arkansas"
+    },
+    
+    {
+        "name": "California",
+        "abbreviation": "CA",
+        "population": 38800000,
+        "income": 61320,
+        "area": 163696,
+        "statefaceLetter": "E",
+        "wikiLink": "https://en.wikipedia.org/wiki/California"
+    },
+    
+    {
+        "name": "Colorado",
+        "abbreviation": "CO",
+        "population": 5356000,
+        "income": 58823,
+        "area": 104185,
+        "statefaceLetter": "F",
+        "wikiLink": "https://en.wikipedia.org/wiki/Colorado"
+    },
+    
+    {
+        "name": "Connecticut",
+        "abbreviation": "CT",
+        "population": 3597000,
+        "income": 65753,
+        "area": 5543,
+        "statefaceLetter": "G",
+        "wikiLink": "https://en.wikipedia.org/wiki/Connecticut"
+    },
+    
+    {
+        "name": "Delaware",
+        "abbreviation": "DE",
+        "population": 935614,
+        "income": 57599,
+        "area": 2491,
+        "statefaceLetter": "H",
+        "wikiLink": "https://en.wikipedia.org/wiki/Delaware"
+    },
+    
+    {
+        "name": "District Of Columbia",
+        "abbreviation": "DC",
+        "population": 658893,
+        "income": 90000,
+        "area": 68.3,
+        "statefaceLetter": "y",
+        "wikiLink": "https://en.wikipedia.org/wiki/Washington,_D.C."
+    },
+    
+    {
+        "name": "Florida",
+        "abbreviation": "FL",
+        "population": 19890000,
+        "income": 46494,
+        "area": 65755,
+        "statefaceLetter": "I",
+        "wikiLink": "https://en.wikipedia.org/wiki/Florida"
+    },
+    
+    {
+        "name": "Georgia",
+        "abbreviation": "GA",
+        "population": 10100000,
+        "income": 47829,
+        "area": 59425,
+        "statefaceLetter": "J",
+        "wikiLink": "https://en.wikipedia.org/wiki/Georgia_(U.S._state)"
+    },
+    
+    {
+        "name": "Hawaii",
+        "abbreviation": "HI",
+        "population": 1420000,
+        "income": 68020,
+        "area": 4028,
+        "statefaceLetter": "K",
+        "wikiLink": "https://en.wikipedia.org/wiki/Hawaii"
+    },
+    
+    {
+        "name": "Idaho",
+        "abbreviation": "ID",
+        "population": 1634000,
+        "income": 47377,
+        "area": 83642,
+        "statefaceLetter": "M",
+        "wikiLink": "https://en.wikipedia.org/wiki/Idaho"
+    },
+    
+    {
+        "name": "Illinois",
+        "abbreviation": "IL",
+        "population": 12880000,
+        "income": 55735,
+        "area": 57915,
+        "statefaceLetter": "N",
+        "wikiLink": "https://en.wikipedia.org/wiki/Illinois"
+    },
+    
+    {
+        "name": "Indiana",
+        "abbreviation": "IN",
+        "population": 6597000,
+        "income": 43993,
+        "area": 36418,
+        "statefaceLetter": "O",
+        "wikiLink": "https://en.wikipedia.org/wiki/Indiana"
+    },
+    
+    {
+        "name": "Iowa",
+        "abbreviation": "IA",
+        "population": 3107000,
+        "income": 52229,
+        "area": 56272,
+        "statefaceLetter": "L",
+        "wikiLink": "https://en.wikipedia.org/wiki/Iowa"
+    },
+    
+    {
+        "name": "Kansas",
+        "abbreviation": "KS",
+        "population": 2904000,
+        "income": 49392,
+        "area": 82277,
+        "statefaceLetter": "P",
+        "wikiLink": "https://en.wikipedia.org/wiki/Kansas"
+    },
+    
+    {
+        "name": "Kentucky",
+        "abbreviation": "KY",
+        "population": 4413000,
+        "income": 41141,
+        "area": 40409,
+        "statefaceLetter": "Q",
+        "wikiLink": "https://en.wikipedia.org/wiki/Kentucky"
+    },
+    
+    {
+        "name": "Louisiana",
+        "abbreviation": "LA",
+        "population": 4650000,
+        "income": 44164,
+        "area": 52271,
+        "statefaceLetter": "R",
+        "wikiLink": "https://en.wikipedia.org/wiki/Louisiana"
+    },
+    
+    {
+        "name": "Maine",
+        "abbreviation": "ME",
+        "population": 1330000,
+        "income": 47069,
+        "area": 35385,
+        "statefaceLetter": "U",
+        "wikiLink": "https://en.wikipedia.org/wiki/Maine"
+    },
+    
+    {
+        "name": "Maryland",
+        "abbreviation": "MD",
+        "population": 5976000,
+        "income": 69272,
+        "area": 12407,
+        "statefaceLetter": "T",
+        "wikiLink": "https://en.wikipedia.org/wiki/Maryland"
+    },
+    
+    {
+        "name": "Massachusetts",
+        "abbreviation": "MA",
+        "population": 6745000,
+        "income": 66768,
+        "area": 10554,
+        "statefaceLetter": "S",
+        "wikiLink": "https://en.wikipedia.org/wiki/Massachusetts"
+    },
+    
+    {
+        "name": "Michigan",
+        "abbreviation": "MI",
+        "population": 9910000,
+        "income": 48273,
+        "area": 96716,
+        "statefaceLetter": "V",
+        "wikiLink": "https://en.wikipedia.org/wiki/Michigan"
+    },
+    
+    {
+        "name": "Minnesota",
+        "abbreviation": "MN",
+        "population": 5457000,
+        "income": 56944,
+        "area": 86943,
+        "statefaceLetter": "W",
+        "wikiLink": "https://en.wikipedia.org/wiki/Minnesota"
+    },
+    
+    {
+        "name": "Mississippi",
+        "abbreviation": "MS",
+        "population": 2994000,
+        "income": 37963,
+        "area": 48434,
+        "statefaceLetter": "Y",
+        "wikiLink": "https://en.wikipedia.org/wiki/Mississippi"
+    },
+    
+    {
+        "name": "Missouri",
+        "abbreviation": "MO",
+        "population": 6064000,
+        "income": 45321,
+        "area": 69704,
+        "statefaceLetter": "X",
+        "wikiLink": "https://en.wikipedia.org/wiki/Missouri"
+    },
+    
+    {
+        "name": "Montana",
+        "abbreviation": "MT",
+        "population": 1024000,
+        "income": 44299,
+        "area": 147164,
+        "statefaceLetter": "Z",
+        "wikiLink": "https://en.wikipedia.org/wiki/Montana"
+    },
+    
+    {
+        "name": "Nebraska",
+        "abbreviation": "NE",
+        "population": 1882000,
+        "income": 51381,
+        "area": 77421,
+        "statefaceLetter": "c",
+        "wikiLink": "https://en.wikipedia.org/wiki/Nebraska"
+    },
+    
+    {
+        "name": "Nevada",
+        "abbreviation": "NV",
+        "population": 2839000,
+        "income": 51525,
+        "area": 110567,
+        "statefaceLetter": "g",
+        "wikiLink": "https://en.wikipedia.org/wiki/Nevada"
+    },
+    
+    {
+        "name": "New Hampshire",
+        "abbreviation": "NH",
+        "population": 1327000,
+        "income": 64375,
+        "area": 9350,
+        "statefaceLetter": "d",
+        "wikiLink": "https://en.wikipedia.org/wiki/New_Hampshire"
+    },
+    
+    {
+        "name": "New Jersey",
+        "abbreviation": "NJ",
+        "population": 8938000,
+        "income": 71637,
+        "area": 8729,
+        "statefaceLetter": "e",
+        "wikiLink": "https://en.wikipedia.org/wiki/New_Jersey"
+    },
+    
+    {
+        "name": "New Mexico",
+        "abbreviation": "NM",
+        "population": 2089000,
+        "income": 43820,
+        "area": 121697,
+        "statefaceLetter": "f",
+        "wikiLink": "https://en.wikipedia.org/wiki/New_Mexico"
+    },
+    
+    {
+        "name": "New York",
+        "abbreviation": "NY",
+        "population": 19750000,
+        "income": 50711,
+        "area": 54556,
+        "statefaceLetter": "h",
+        "wikiLink": "https://en.wikipedia.org/wiki/New_York"
+    },
+    
+    {
+        "name": "North Carolina",
+        "abbreviation": "NC",
+        "population": 9944000,
+        "income": 45906,
+        "area": 53819,
+        "statefaceLetter": "a",
+        "wikiLink": "https://en.wikipedia.org/wiki/North_Carolina"
+    },
+    
+    {
+        "name": "North Dakota",
+        "abbreviation": "ND",
+        "population": 739482,
+        "income": 53585,
+        "area": 70762,
+        "statefaceLetter": "b",
+        "wikiLink": "https://en.wikipedia.org/wiki/North_Dakota"
+    },
+    
+    {
+        "name": "Ohio",
+        "abbreviation": "OH",
+        "population": 11590000,
+        "income": 48081,
+        "area": 44825,
+        "statefaceLetter": "i",
+        "wikiLink": "https://en.wikipedia.org/wiki/Ohio"
+    },
+    
+    {
+        "name": "Oklahoma",
+        "abbreviation": "OK",
+        "population": 3878000,
+        "income": 45704,
+        "area": 69960,
+        "statefaceLetter": "j",
+        "wikiLink": "https://en.wikipedia.org/wiki/Oklahoma"
+    },
+    
+    {
+        "name": "Oregon",
+        "abbreviation": "OR",
+        "population": 3970000,
+        "income": 50251,
+        "area": 98466,
+        "statefaceLetter": "k",
+        "wikiLink": "https://en.wikipedia.org/wiki/Oregon"
+    },
+    
+    {
+        "name": "Pennsylvania",
+        "abbreviation": "PA",
+        "population": 12790000,
+        "income": 52007,
+        "area": 46055,
+        "statefaceLetter": "l",
+        "wikiLink": "https://en.wikipedia.org/wiki/Pennsylvania"
+    },
+    
+    {
+        "name": "Rhode Island",
+        "abbreviation": "RI",
+        "population": 1055000,
+        "income": 55902,
+        "area": 1212,
+        "statefaceLetter": "m",
+        "wikiLink": "https://en.wikipedia.org/wiki/Rhode_Island"
+    },
+    
+    {
+        "name": "South Carolina",
+        "abbreviation": "SC",
+        "population": 4832000,
+        "income": 44163,
+        "area": 32020,
+        "statefaceLetter": "n",
+        "wikiLink": "https://en.wikipedia.org/wiki/South_Carolina"
+    },
+    
+    {
+        "name": "South Dakota",
+        "abbreviation": "SD",
+        "population": 853175,
+        "income": 48947,
+        "area": 77184,
+        "statefaceLetter": "o",
+        "wikiLink": "https://en.wikipedia.org/wiki/South_Dakota"
+    },
+    
+    {
+        "name": "Tennessee",
+        "abbreviation": "TN",
+        "population": 6549000,
+        "income": 44297,
+        "area": 42181,
+        "statefaceLetter": "p",
+        "wikiLink": "https://en.wikipedia.org/wiki/Tennessee"
+    },
+    
+    {
+        "name": "Texas",
+        "abbreviation": "TX",
+        "population": 26960000,
+        "income": 51704,
+        "area": 268820,
+        "statefaceLetter": "q",
+        "wikiLink": "https://en.wikipedia.org/wiki/Texas"
+    },
+    
+    {
+        "name": "Utah",
+        "abbreviation": "UT",
+        "population": 2943000,
+        "income": 59770,
+        "area": 84899,
+        "statefaceLetter": "r",
+        "wikiLink": "https://en.wikipedia.org/wiki/Utah"
+    },
+    
+    {
+        "name": "Vermont",
+        "abbreviation": "VT",
+        "population": 626562,
+        "income": 52578,
+        "area": 9623,
+        "statefaceLetter": "t",
+        "wikiLink": "https://en.wikipedia.org/wiki/Vermont"
+    },
+    
+    {
+        "name": "Virginia",
+        "abbreviation": "VA",
+        "population": 8326000,
+        "income": 62666,
+        "area": 42775,
+        "statefaceLetter": "s",
+        "wikiLink": "https://en.wikipedia.org/wiki/Virginia"
+    },
+    
+    {
+        "name": "Washington",
+        "abbreviation": "WA",
+        "population": 7062000,
+        "income": 58405,
+        "area": 66544,
+        "statefaceLetter": "u",
+        "wikiLink": "https://en.wikipedia.org/wiki/Washington_(state)"
+    },
+    
+    {
+        "name": "West Virginia",
+        "abbreviation": "WV",
+        "population": 1850000,
+        "income": 41253,
+        "area": 24230,
+        "statefaceLetter": "w",
+        "wikiLink": "https://en.wikipedia.org/wiki/West_Virginia"
+    },
+    
+    {
+        "name": "Wisconsin",
+        "abbreviation": "WI",
+        "population": 5758000,
+        "income": 51467,
+        "area": 65556,
+        "statefaceLetter": "v",
+        "wikiLink": "https://en.wikipedia.org/wiki/Wisconsin"
+    },
+    
+    {
+        "name": "Wyoming",
+        "abbreviation": "WY",
+        "population": 584153,
+        "income": 58752,
+        "area": 97818,
+        "statefaceLetter": "x",
+        "wikiLink": "https://en.wikipedia.org/wiki/Wyoming"
+    }
+]

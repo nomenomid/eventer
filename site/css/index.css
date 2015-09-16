@@ -1,0 +1,38 @@
+#wrapper {
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#wrapper a {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+#wrapper a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s linear;
+    z-index: 1;
+}
+
+#wrapper a:hover:before {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#wrapper a:first-of-type {
+    margin-right: 10%;
+}
+
+#wrapper a:first-of-type img {
+    height: 70px;
+}
