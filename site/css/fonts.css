@@ -1,5 +1,4 @@
 @font-face {
-<<<<<<< HEAD
     font-family: "Glyphicons Halflings";
     src: url("../fonts/glyphicons-halflings-regular.woff") format("woff");
 }
@@ -41,7 +40,6 @@
     font-style: normal;
     font-weight: 400;
     src: local("Lato"), url(../fonts/Lato.woff) format('woff');
-=======
     font-family: "Stateface";
     src: local("Cinzel"), url(../fonts/StateFace-Regular.otf) format("opentype");
 }
@@ -74,5 +72,4 @@
 @font-face {
     font-family: "Font Awesome";
     src: local("Font Awesome"), url(../fonts/fontawesome.woff) format("woff");
->>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
 }

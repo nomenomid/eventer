@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Event Scheduler (<a href = "https://radiant-castle-6606.herokuapp.com/" target = "_blank">Demo</a>)
 
 An software development organization located in Chantilly, VA has requested to 
@@ -19,7 +18,7 @@ develop a simple event scheduling application.
 * Use the MVC design pattern and OOP practices
 * Use PHP, Codeigniter, JavaScript, and Sencha's Ext JS
 * Use MYSQL database
-=======
+
 #Interactive States Browser (<a href = "https://radiant-shore-8023.herokuapp.com/ " target = "_blank">Demo</a>)
 
 A media firm located near Rockville, MD has asked to build a states
@@ -37,4 +36,3 @@ information portal.
   - Organize code using Backbone.js.
   - Add search and sort functionality and mixins. 
   - Provide a link to the final version of an app on GitHub.
->>>>>>> 41b10827a65bd4dcbaa133d4e049b0298eef5ce3
