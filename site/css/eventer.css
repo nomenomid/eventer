@@ -1,0 +1,965 @@
+*, :before, :after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #e6e6e6;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#eventer {
+    height: 100%;
+    position: relative;
+}
+
+/* SIDE MENU */
+
+#sideMenuControl {
+    display: none;
+}
+
+#eventer > aside {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    background-color: #363640;
+    width: 175px;
+    transition: left ease-out 0.3s;
+}
+
+#eventer > aside > label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: linear-gradient(to left, #363640, #4A4A5A);
+    cursor: pointer;
+    width: 12px;
+}
+
+#eventer > aside > label:before {
+    content:"\e079";
+    font-family: "Glyphicons Halflings";
+    font-size: 10px;
+    color: #8B8B8B;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -5px;
+}
+
+#eventer > aside > label:hover {
+    background: linear-gradient(to left, #4A4A5A, #57576B);
+}
+
+#eventer > aside > label:hover:before {
+    color: #f1f1f1;
+}
+
+#sideMenuControl:checked + aside {
+    left: -163px;
+}
+
+#sideMenuControl:checked + aside label:before {
+    content:"\e080";
+}
+
+#sideMenuControl:checked ~ .mainSection {
+    margin-left: 12px;
+}
+
+#eventer > aside a {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font: bold 15px/4 Sans-Serif;
+    text-shadow: 0 0 1px #000;
+    text-decoration: none;
+    padding-left: 40px;
+    position: relative;
+}
+
+#eventer > aside li:not(.selected):hover > a {
+    color: rgba(220, 220, 220, 1);
+}
+
+#eventer > aside li.selected > a {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(230, 230, 230, 1);
+    border-bottom-color: transparent;
+}
+
+#eventer > aside li {
+    border-bottom: 1px solid rgba(60, 60, 60, 1);
+}
+
+#eventer > aside li > a {
+    border-bottom: 1px solid rgba(45, 45, 45, 1);
+}
+
+#eventer > aside li > a:before {
+    content:"\e046";
+    font-family: "Glyphicons Halflings";
+    margin-right: 20px;
+}
+
+#eventer > aside li:nth-of-type(2) > a:before {
+    content:"\e043";
+}
+
+#eventer > aside li:nth-of-type(3) > a:before {
+    content:"\2709";
+}
+
+#eventer > aside li:nth-of-type(4) > a:before {
+    content:"\e086";
+}
+
+#eventer > aside li:not(.selected):hover > a:before {
+    opacity: 0.7;
+}
+
+#eventer > aside li:first-of-type:hover > a:before,
+#eventer > aside li.selected:first-of-type > a:before {
+    color: #ff8000;
+}
+
+#eventer > aside li:nth-of-type(2):hover > a:before,
+#eventer > aside li.selected:nth-of-type(2) > a:before {
+    color: #31b404;
+}
+
+#eventer > aside li:nth-of-type(3):hover > a:before,
+#eventer > aside li.selected:nth-of-type(3) > a:before {
+    color: #2e64fe;
+}
+
+#eventer > aside li:nth-of-type(4):hover > a:before,
+#eventer > aside li.selected:nth-of-type(4) > a:before {
+    color: #9a2efe;
+}
+
+/* PAGE HEADER */
+
+#eventer > header {
+    background-color: #363640;
+    height: 60px;
+    overflow: hidden;
+}
+
+#eventer > header > h1 {
+    font: 20px/3 Exo, Sans-Serif;
+    color: #fff;
+    padding: 0 40px;
+    background-color: #d25000;
+    text-shadow: 0px 0px 1px rgba(30, 30, 30, 0.5);
+    letter-spacing: 2px;
+    width: 175px;
+    float: left;
+}
+
+#eventer > header ul {
+    text-align: right;
+    float: right;
+}
+
+#eventer > header li {
+    display: inline-block;
+}
+
+#eventer > header a {
+    display: block;
+    font: bold 12px/60px Sans-Serif;
+    text-decoration: none;
+    color: rgba(230, 230, 230, 0.9);
+    padding: 0 20px;
+    position: relative;
+}
+
+#eventer > header li a:before {
+    font-family: "Glyphicons Halflings";
+    content:"\e019";
+    margin-right: 12px;
+}
+
+#eventer > header li:nth-of-type(2) > a:before {
+    content:"\e122";
+}
+
+#eventer > header li:nth-of-type(3) > a:before {
+    content:"\e085";
+}
+
+#eventer > header li:nth-of-type(4) > a:before {
+    content:"\e008";
+}
+
+#eventer > header li:nth-of-type(5) > a:before {
+    content: "\f09b";
+    font: 16px "Font Awesome";
+}
+
+#eventer > header li > a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 10px;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.9);
+    transition: all ease-out 0.3s;
+}
+
+#eventer > header li:hover > a {
+    color: rgba(255, 255, 255, 1);
+}
+
+#eventer > header li:hover > a:after {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    border-bottom-color: rgba(250, 250, 250, 0.9);
+}
+
+/* MAIN SECTIONS */
+
+#eventer .mainSection {
+    display: none;
+}
+
+#eventer .mainSection.show {
+    display: block;
+}
+
+
+/* SCHEDULER WITH TABS */
+
+.mainSection {
+    height: calc(100% - 60px);
+    margin-left: 175px;
+    padding: 25px;
+    position: relative;
+    transition: margin-left ease-out 0.3s;
+}
+
+#eventer .tabs {
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+#eventer .tabs > li {
+    display: inline-block;
+    background-color: #e1e1e1;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#eventer .tabs > li:first-of-type {
+    margin-left: 20px;
+}
+
+#eventer .tabs > li:hover {
+    background-color: #eaeaea;
+}
+
+#eventer .tabs > li + li {
+    margin-left: 2px;
+}
+
+#scheduler > input[name = "tabController"] {
+    display: none;
+}
+
+#eventer .tabs label {
+    display: block;
+    font: bold 13px/30px "Open Sans", Sans-Serif;
+    text-transform: uppercase;
+    padding: 0 10px;
+    cursor: pointer;
+    letter-spacing: -0.5px;
+    color: #a4a4a4;
+    text-shadow: 1px 1px 1px #f2f2f2;
+}
+
+#scheduler > input[name = "tabController"]:nth-of-type(1):checked ~ .tabs > li:nth-of-type(1),
+#scheduler > input[name = "tabController"]:nth-of-type(2):checked ~ .tabs > li:nth-of-type(2),
+#scheduler > input[name = "tabController"]:nth-of-type(3):checked ~ .tabs > li:nth-of-type(3) {
+    border-bottom-color: #f3f3f3;
+    background-color: #f3f3f3;
+    
+}
+
+#scheduler > input[name = "tabController"]:nth-of-type(1):checked ~ .tabs > li:nth-of-type(1) > label,
+#scheduler > input[name = "tabController"]:nth-of-type(2):checked ~ .tabs > li:nth-of-type(2) > label,
+#scheduler > input[name = "tabController"]:nth-of-type(3):checked ~ .tabs > li:nth-of-type(3) > label {
+    color: #424242;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+#scheduler > input[name = "tabController"]:checked + section {
+    display: block;
+}
+
+/* SECTION THAT IS THE TAB BODY */
+
+#scheduler > section {
+    position: absolute;
+    top: 55px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 25px;
+    display: none;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+#scheduler > section > h2 {
+    font: bold 30px/1 "Open Sans", Sans-Serif;
+    color: #e06100;
+    text-shadow: 1px 1px 1px #fff;
+    margin-bottom: 10px;
+}
+
+#scheduler > section > h2:before {
+    content:"\e032";
+    font-family: "Glyphicons Halflings";
+    margin-right: 10px;
+    font-size: 25px;
+    position: relative;
+    top: 2px;
+}
+
+#scheduler > section:nth-of-type(2) > h2:before {
+    content:"\e184";
+}
+
+#scheduler > section:nth-of-type(3) > h2:before {
+    content:"\e136";
+}
+
+/* SCHEDULER FORMATTING */
+
+#scheduler #schedule {
+    overflow-y: auto;
+}
+
+#scheduleForm {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(200, 200, 200, 0.03);
+    border: 1px solid #ccc;
+    display: table;
+    min-width: 700px;
+}
+
+#scheduleForm > header {
+    white-space: nowrap;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #ddd;
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+button.add, 
+button.cancel,
+button.update {
+    display: inline-block;
+    padding: 5px 10px;
+    font: bold 14px/1 "Open Sans", Sans-Serif;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #fff;
+    box-shadow: inset 0 -5px 15px #dadada;
+    cursor: pointer;
+    color: #424242;
+    position: relative;
+    outline: 0;
+}
+
+button.add:hover, 
+button.cancel:hover,
+button.update:hover {
+    color: #151515;
+    background-color: #fafafa;
+    box-shadow: inset 0 -5px 15px #eee;
+}
+
+button.add[disabled],
+button.add[disabled]:hover,
+button.update[disabled],
+button.update[disabled]:hover {
+    background-color: #ccc;
+    background: linear-gradient(to top, #bbb, #ddd);
+    box-shadow: none;
+    color: #424242;
+}
+
+button.add:hover > .plusIcon {
+    background-color: #0b610b;
+    opacity: 0.8;
+}
+
+button.add[disabled]:hover > .plusIcon {
+    background-color: #000;
+    opacity: 0.7;
+}
+
+#scheduleForm header button.add {
+    position: absolute;
+    top: 0;
+}
+
+.plusIcon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #000;
+    position: relative;
+    margin-right: 7px;
+    opacity: 0.7;
+    vertical-align: top;
+}
+
+.plusIcon:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 8px;
+    background-color: #fff;
+    top: 6px;
+    left: 3px;
+}
+
+.plusIcon:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 8px;
+    width: 2px;
+    left: 6px;
+    top: 3px;
+}
+
+#filterGroup {
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    white-space: nowrap;
+}
+
+#filterGroup > span {
+    font: bold 14px/1 "Open Sans", Sans-Serif;
+    color: #9F9F9F;
+    text-shadow: 0 0 1px #fff;
+}
+
+#filterGroup > div {
+    display: inline-block;
+}
+
+#filterGroup > div + div {
+    margin-left: 10px;
+}
+
+/* FORMATTING FOR SCHEDULE TABLE */
+
+#scheduleForm table {
+    border-collapse: separate;
+    min-width: 1042px;
+}
+
+#scheduleForm th {
+    background-color: #6E6E6E;
+    background: linear-gradient(to bottom, #72767E, #696C73);
+    font: 14px/1.5 "Open Sans Medium", Sans-Serif;
+    color: #fafafa;
+    text-shadow: 0 0 1px #000;
+    border: solid #575C68;
+    border-width: 1px 0;
+}
+
+#scheduleForm th > span {
+    display: block;
+    padding: 3px 10px;
+    border-top: 1px solid #979797;
+    white-space: nowrap;
+}
+
+#scheduleForm th + th {
+    border-left: 1px solid #575B62;
+}
+
+#scheduleForm th + th > span {
+    border-left: 1px solid #70737A;
+}
+
+#scheduleForm th:first-of-type {
+    border-top-left-radius: 5px;
+}
+
+#scheduleForm th:last-of-type {
+    border-top-right-radius: 5px;
+}
+
+#scheduleForm th:nth-of-type(2),
+#scheduleForm th:nth-of-type(3) {
+    text-align: left;
+}
+
+#scheduleForm th:first-of-type span,
+#scheduleForm th:last-of-type span {
+    padding: 3px 2px;
+    border-radius: inherit;
+}
+
+#scheduleForm th:first-of-type input[type = "checkbox"] {
+    display: none;
+}
+
+#scheduleForm th:first-of-type label:before,
+#scheduleForm td:first-of-type label:before {
+    content:"\e013";
+    font: 14px "Glyphicons Halflings";
+    padding: 0 5px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+#scheduleForm td:first-of-type > label:before {
+    color: #ccc;
+}
+
+#scheduleForm td:first-of-type > label:hover:before {
+    color: #484848;
+}
+
+#scheduleForm th:first-of-type > label:hover:before {
+    color: #fff;
+}
+
+#scheduleForm tbody tr {
+    background-color: #EEEEEE;
+}
+
+#scheduleForm table tbody tr:not(.editing):not(.emptyFooter):hover {
+    background-color: #fff;
+}
+
+#scheduleForm table tbody tr.hidden,
+#scheduleForm table tbody tr.hiddenForUpdate {
+    display: none;
+}
+
+#scheduleForm td {
+    white-space: nowrap;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+#scheduleForm td:first-of-type {
+    border-left: 1px solid #aaa;
+    text-align: center;
+}
+
+#scheduleForm td:last-of-type {
+    border-right: 1px solid #aaa;
+    text-align: center;
+}
+
+#scheduleForm td:nth-of-type(4),
+#scheduleForm td:nth-of-type(5) {
+    text-align: center;
+}
+
+#scheduleForm td > label {
+    font: 14px/24px "Lato", "Open Sans", Sans-Serif;
+    color: #2e2e2e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+#scheduleForm td:nth-of-type(2) > label,
+#scheduleForm td:nth-of-type(3) > label {
+    width: 150px;
+}
+
+#scheduleForm td:nth-of-type(4) > label,
+#scheduleForm td:nth-of-type(5) > label {
+    width: 232px;
+}
+
+#scheduleForm td:last-of-type > label {
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+#scheduleForm td:last-of-type > label:last-of-type {
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+#scheduleForm td:last-of-type > label:hover:before {
+    opacity: 1;
+}
+
+#scheduleForm td:last-of-type > .edit:before,
+#scheduleForm td:last-of-type > .delete:before {
+    content:"\270f";
+    font: 14px "Glyphicons Halflings";
+    color: #585858;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#scheduleForm tbody tr td:last-of-type > label.edit.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#scheduleForm td:last-of-type > .delete:before {
+    content:"\e088";
+}
+
+#scheduleForm tbody .emptyFooter {
+    display: none;
+}
+
+#scheduleForm td[colspan] {
+    padding: 10px 0;
+    border: solid #aaa;
+    border-width: 0px 1px 1px;
+    text-align: center;
+    color: #aaa;
+    font: bold 12px/1 "Open Sans Medium", Sans-Serif;
+}
+
+#scheduleForm tbody .emptyFooter:only-of-type,
+#scheduleForm tbody .emptyFooter.show {
+    display: table-row;
+}
+
+#scheduleForm .editing td > label {
+    display: none;
+}
+
+#scheduleForm tr:not(.editing) td > label {
+    display: inline-block;
+}
+
+#scheduleForm tr:not(.editing) td > input,
+#scheduleForm tr:not(.editing) td > div,
+#scheduleForm tr:not(.editing) td > button {
+    display: none;
+}
+
+
+/* FORMATTING FOR COMPANIES AND ACTIVITIES SECTIONS */
+
+#eventer section:nth-of-type(n + 2) div.form{
+    width: 450px;
+    position: absolute;
+    top: 70px;
+    bottom: 20px;
+}
+
+#eventer section:nth-of-type(n + 2) div.form span {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    height: 45px;
+}
+
+#eventer section:nth-of-type(n + 2) div.form input[type = "text"] {
+    width: 100%;
+    height: 45px;
+    font: 18px/1 "Open Sans", Sans-Serif;
+    color: #2e2e2e;
+    position: absolute;
+    padding: 0 10px;
+    border: 1px dotted orange;
+    background-color: rgba(250, 250, 250, 1);
+    transition: background-color 0.3s linear;
+    outline: 0;
+}
+
+#eventer section:nth-of-type(n + 2) div.form input[type = "text"]:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#eventer section:nth-of-type(n + 2) div.form input[type = "text"]::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+#eventer section:nth-of-type(n + 2) div.form input[type = "text"]::-moz-placeholder {
+    font-style: italic;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: auto;
+	padding-top: 1px;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list::-webkit-scrollbar {
+    width: 0;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li {
+    font: bold 14px/45px "Open Sans", Sans-Serif;
+    color: #2e2e2e;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li:first-of-type {
+    border-top: 1px solid #ddd;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li:not(:first-of-type) {
+	margin-top: -1px;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li button.remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0;
+    outline: 0;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li button.remove:before {
+    content:"\e088";
+    font-family: "Glyphicons Halflings";
+    font-size: 16px;
+    transition: color 0.2s ease-out;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li:not(.errorFlash):hover {
+    background-color: #fcfcfc;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li:hover button.remove {
+    opacity: 0.6;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li:hover button.remove:hover:before {
+    color: #FF0000;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li > div.view {
+    position: relative;
+    padding: 0 10px;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li > input {
+    display: none;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li.editing > input.edit {
+    display: block;
+    position: static;
+    background-color: #fff;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li.editing input.edit {
+    border: 0;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li.editing > div.view {
+    display: none;
+}
+
+#eventer section:nth-of-type(n + 2) .name-list > li.errorFlash > div.view {
+    color: #F6682C;
+}
+
+/* Instructions template */
+
+#scheduler .instruction {
+    font: 14px/1.2 "Quicksand Light", Sans-Serif;
+    color: #1c1c1c;
+    width: 200px;
+    position: absolute;
+    left: calc(100% + 20px);
+    top: 0;
+}
+
+#scheduler .instruction > ul {
+    opacity: 0;
+    transition: opacity ease-in 0.3s;
+}
+
+#scheduler .instruction strong {
+    font-weight: bold;
+    border-bottom: 1px solid #6e6e6e;
+}
+
+#scheduler .instruction code {
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+#scheduler .instruction input[type = "checkbox"] {
+    display: none;
+}
+
+#scheduler .instruction input[type = "checkbox"]:checked ~ ul {
+    opacity: 1;
+}
+
+#scheduler .instruction label:after {
+    content:"\e146";
+    font-family: "Glyphicons Halflings";
+    margin-left: 5px;
+    font-size: 12px;
+    opacity: 0.75;
+    transition: opacity ease-in 0.3s;
+}
+
+#scheduler .instruction input[type = "checkbox"]:checked + label:after {
+    opacity: 0;
+}
+
+#scheduler .instruction label {
+    font-size: 18px;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+#scheduler .instruction li + li {
+    margin-top: 10px;
+}
+
+#scheduler > footer {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 25px;
+    text-align: right;
+    font: 10px/2 "Open Sans", Sans-Serif;
+    color: rgba(120, 120, 120, 1);
+    text-shadow: 0 0 1px #fafafa;
+}
+
+#scheduler > footer:first-letter {
+    font-family: Sans-Serif;
+}
+
+#scheduler > footer > sup {
+    vertical-align: super;
+    font-size: 0.5em;
+}
+
+@media screen and (max-width: 620px) {
+    #eventer > header li a span {
+        display: none;
+    }
+    
+    #eventer > header li a {
+        padding: 0 20px;
+    }
+    
+    #eventer > header li a:before {
+        position: static;
+        margin: auto;
+    }
+    
+    #eventer > header li a:after {
+        display: none;
+    }
+    
+    #eventer > header li a:before {
+        font-size: 15px;
+    }
+}
+
+@-webkit-keyframes errorFlash {
+    0% {
+        box-shadow: inset 0 0 5px #F6682C;
+        border-color: transparent;
+    }
+    
+    25% {
+        box-shadow: inset 0 0 10px #F6682C;
+    }
+    
+    50% {
+        box-shadow: inset 0 0 5px #F6682C;
+    }
+    
+    75% {
+        box-shadow: inset 0 0 10px #F6682C;
+    }
+    
+    100% {
+        box-shadow: inset 0 0 5px #F6682C;
+        border-color: transparent;
+    }
+}
+    
+@keyframes errorFlash {
+    0% {
+        box-shadow: inset 0 0 5px #F6682C;
+        border-color: transparent;
+    }
+    
+    25% {
+        box-shadow: inset 0 0 10px #F6682C;
+    }
+    
+    50% {
+        box-shadow: inset 0 0 5px #F6682C;
+    }
+    
+    75% {
+        box-shadow: inset 0 0 10px #F6682C;
+    }
+    
+    100% {
+        box-shadow: inset 0 0 5px #F6682C;
+        border-color: transparent;
+    }
+}
+        
+.errorFlash {
+    -webkit-animation: errorFlash linear 0.7s;
+    animation: errorFlash linear 0.7s;
+}

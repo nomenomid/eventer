@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Planner</title>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/reset.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/fonts.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/eventer.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/datePicker.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/timePicker.css" />
+        <link rel = "stylesheet" media = "all" type = "text/css" href = "./css/comboBox.css" />
+    </head>
+    <body>
+        <div id = "eventer">
+            <header>
+                <h1>EVENTER</h1>
+                <ul>
+                    <li><a href = "#"><span>Settings</span></a></li>
+                    <li><a href = "#"><span>FAQ</span></a></li>
+                    <li><a href = "#"><span>Help</span></a></li>
+                    <li><a href = "#"><span>Account</span></a></li>
+                    <li><a href = "https://github.com/nomenomid/technical.exercises/tree/master/eventer" target = "_blank"><span>Source code</span></a></li>
+                </ul>
+            </header>
+            <input type = "checkbox" id = "sideMenuControl" />
+            <aside>
+                <ul>
+                    <li><a href = "#events">Events</a></li>
+                    <li><a href = "#reports">Reports</a></li>
+                    <li><a href = "#contact">Contact</a></li>
+                    <li><a href = "#about">About</a></li>
+                </ul>
+                <label for = "sideMenuControl"></label>
+            </aside>
+            <div id = "scheduler" class = "mainSection">
+                <input type = "radio" id = "scheduleRadio" name = "tabController" checked />
+                <section id = "schedule">
+                    <h2>Schedule</h2>
+                    <div id = "scheduleForm">
+                        <header>
+                            <button class = "add"><span class = "plusIcon"></span>Add Event</button>
+                            <div id = "filterGroup">
+                                <span>Filter by:</span>
+                            </div>
+                        </header>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>
+                                            <input type = "checkbox" id = "toggleAllRecords" />
+                                            <label for = "toggleAllRecords"></label>
+                                        </span>
+                                    </th>
+                                    <th><span>Company</span></th>
+                                    <th><span>Activity</span></th>
+                                    <th><span>Start Date</span></th>
+                                    <th><span>End Date</span></th>
+                                    <th><span>&nbsp;</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class = "emptyFooter">
+                                    <td colspan = "6">The schedule is empty</td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                    
+                </section>
+                <input type = "radio" id = "companiesRadio" name = "tabController" />
+                <section id = "companies">
+                    <h2>Companies</h2>
+                    
+                </section>
+                <input type = "radio" id = "activitiesRadio" name = "tabController" />
+                <section id = "activities">
+                    <h2>Activities</h2>
+                    
+                </section>
+                <ul class = "tabs">
+                    <li><label for = "scheduleRadio">Schedule</label></li><li><label for = "companiesRadio">Companies</label></li><li><label for = "activitiesRadio">Activities</label></li>
+                </ul>
+                <footer>&copy; 2014 &nbsp;D<sup>#</sup> Media Inc. &nbsp;All rights reserved.</footer>
+            </div>
+            <div id = "reports" class = "mainSection">
+                Reports
+            </div>
+            <div id = "contact" class = "mainSection">
+                Contact
+            </div>
+            <div id = "about" class = "mainSection">
+                About
+            </div>
+        </div>
+
+        <script type = "text/template" id = "event-template">
+            <td>
+                <label></label>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+                <label><%= startDate %></label>
+            </td>
+            <td>
+                <label><%= endDate %></label>
+            </td>
+            <td>
+                <label class = "edit"></label>
+                <label class = "delete"></label>
+            </td>
+        </script>
+
+        <script type = "text/template" id = "event-edit-template">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button disabled class = "add">Save</button>
+                <button class = "cancel">Cancel</button>
+            </td>
+        </script>
+        
+        <script type = "text/template" id = "instructions-template">
+            <input type = "checkbox" id = "<%= name %>Checkbox" />
+            <label for = "<%= name %>Checkbox">Instructions</label>
+            <ul>
+                <li>
+                    <strong>To find</strong> a record, scroll through the list, or 
+                    type the name in the text box.
+                </li>
+                <li>
+                    <strong>To add</strong> a record, type a unique name in the 
+                    text box and press <code>ENTER</code> key.
+                </li>
+                <li>
+                    <strong>To update</strong> a name, find the record,
+                    double click on the name, make the changes, and press 
+                    <code>ENTER</code> key.
+                </li>
+                <li>
+                    <strong>To delete</strong> a record, find the name, 
+                    and click on the x-icon to the right of the name.
+                </li>
+            </ul>
+        </script>
+        
+        <script type = "text/template" id = "name-list-template">
+            <span><input class = "new-record" placeholder = "Type a name to add or search" type = "text" autofocus /></span>
+            <ul class = "name-list"></ul>
+        </script>
+        
+        <script type = "text/template" id = "name-template">
+            <div class = "view"><%= name %><button class = "remove"></button></div>
+            <input class = "edit" type = "text" value = "<%= name %>" autofocus placeholder = "Pressing ENTER will delete the item" />
+        </script>
+
+        <!-- LIBRARIES -->
+        <script type = "text/javascript" src = "./js/lib/js.extensions.js"></script>
+        
+        <script type = "text/javascript" src = "./js/lib/jquery.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.cursorAtTheEnd.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.dateFormat.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.comparators.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.extensions.js"></script>
+
+        <script type = "text/javascript" src = "./js/lib/underscore.js"></script>
+        <script type = "text/javascript" src = "./js/lib/backbone.js"></script>
+        <script type = "text/javascript" src = "./js/lib/backbone.localStorage.js"></script>
+        
+        <script type = "text/javascript" src = "./js/lib/jquery.widgetCommon.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.datePicker.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.timePicker.js"></script>
+        <script type = "text/javascript" src = "./js/lib/jquery.comboBox.js"></script>
+        
+        <!-- MODELS -->
+        <script type = "text/javascript" src = "./js/app/models/NameModel.js"></script>
+		<script type = "text/javascript" src = "./js/app/models/EventModel.js"></script>
+        
+        <!-- COLLECTIONS -->
+        <script type = "text/javascript" src = "./js/app/collections/NameCollection.js"></script>
+		<script type = "text/javascript" src = "./js/app/collections/EventCollection.js"></script>
+        
+        <!-- VIEWS -->
+        <!-- place rudimentary views first -->
+        <script type = "text/javascript" src = "./js/app/views/InstructionsView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/NameView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/NameListView.js"></script>
+
+        <script type = "text/javascript" src = "./js/app/views/NameViewSimple.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/ComboBoxItemView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/ComboBoxView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/DateTimeView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/EventView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/EventEditView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/ScheduleView.js"></script>
+        <script type = "text/javascript" src = "./js/app/views/FilterView.js"></script>
+
+        <script type = "text/javascript" src = "./js/app/views/MainView.js"></script>
+        <script type = "text/javascript" src = "./js/app/routers/MainRouter.js"></script>
+        <!-- APP STARTUP -->
+        <script type = "text/javascript" src = "./js/app/eventer.js"></script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+.comboBox {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    font: 14px/1 Lato, "Open Sans", Sans-Serif;
+    width: 150px;
+}
+
+.comboBox > .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(100, 100, 100, 0.2);
+    border-radius: 3px;
+    display: none;
+}
+
+.comboBox.disabled > .cover {
+    display: block;
+}
+
+.comboBox input {
+    position: relative;
+    font: 14px/1 Lato, "Open Sans", Sans-Serif;
+    height: 100%;
+    width: 100%;
+    line-height: 25px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 0 20px 0 5px;
+    z-index: 1;
+    color: #2e2e2e;
+    outline: 0;
+}
+
+.comboBox.show .listHolder ul,
+.comboBox.show .listHolder ul {
+    margin-top: 0;
+}
+
+.comboBox .listHolder {
+    position: absolute;
+    overflow: hidden;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.comboBox .listHolder:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    z-index: 5;
+}
+
+.comboBox .listHolder ul {
+    width: 100%;
+    margin-top: -150px;
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: margin-top linear 0.2s;
+    background-color: #fff;
+    border: solid #ccc;
+    border-width: 0 1px 1px;
+}
+
+.comboBox .listHolder ul:empty {
+    border: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.comboBox ul li {
+    width: 100%;
+    padding: 5px 2px 5px 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.comboBox ul li:hover {
+    background-color: #eee;
+}
+
+.comboBox.show div ul {
+    margin-top: 0;
+}
+
+.comboBox .clearSelection {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    right: 6px;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+
+.comboBox .clearSelection:before {
+    top: 50%;
+    height: 100%;
+    margin-top: -5px;
+    position: absolute;
+    content:"\e014";
+    font: 10px/1 "Glyphicons Halflings";
+    color: #787878;
+}
+
+.comboBox .clearSelection:hover:before {
+    text-shadow: 0 0 1px #888888;
+}
+
+.comboBox .clearSelection.show {
+    display: block;
+}

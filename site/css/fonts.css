@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src: url("../fonts/glyphicons-halflings-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Font Awesome";
+    src: local("Font Awesome"), url("../fonts/fontawesome.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"), url("../fonts/OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans Medium";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans Medium"), local("OpenSansMedium"), url("../fonts/OpenSans-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Exo";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Exo"), url("../fonts/Exo-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Quicksand Light";
+    font-weight: lighter;
+    src: local("Quicksand Light"), url("../fonts/Quicksand-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Lato"), url(../fonts/Lato.woff) format('woff');
+}

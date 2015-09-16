@@ -1,0 +1,149 @@
+.datePicker {
+    position: relative;
+    display: inline-block;
+    white-space: normal;
+}
+
+.datePicker,
+.datePicker * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.datePicker .icon {
+    color: #EB5C03;
+    height: 100%;
+    width: 25px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    opacity: 0.5;
+}
+
+.datePicker .icon:before {
+    content:"\e109";
+    font-family: "Glyphicons Halflings";
+}
+
+.datePicker .icon:hover {
+    opacity: 0.75;
+}
+
+.datePicker input {
+    height: 25px;
+    width: 90px;
+    font: 14px/25px "Open Sans", Sans-Serif;
+    padding: 0 0 0 5px;
+    outline: 0;
+    color: #6e6e6e;
+    margin-right: 25px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.datePicker .calendar {
+    background-color: #fafafa;
+    position: absolute;
+    margin-top: 1px;
+    border: 1px solid #ccc;
+    padding: 40px 10px 10px;
+    display: none;
+    right: 0;
+    outline: 0;
+}
+
+.datePicker.show .calendar {
+    display: block;
+}
+
+.datePicker.show .icon {
+    opacity: 1;
+}
+
+.datePicker .calendar header {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+}
+
+.datePicker .calendar header .title {
+    font: 12px/2 Sans-Serif;
+}
+
+.datePicker .calendar header button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background: linear-gradient(to top, #ccc, #eee);
+    outline: 0;
+    cursor: pointer;
+}
+
+.datePicker .calendar header button:hover {
+    background: linear-gradient(to top, #ddd, #fff);
+}
+
+.datePicker .calendar header .next {
+    left: auto;
+    right: 0;
+    border-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.datePicker .calendar .previous:before,
+.datePicker .calendar .next:before {
+    color: #5e5e5e;
+    text-shadow: 0 1px 1px #fafafa;
+    font-size: 10px;
+    content:"\e079";
+    font-family: "Glyphicons Halflings";
+}
+
+.datePicker .calendar .next:before {
+    content:"\e080";
+}
+
+.datePicker .grid {
+    border: 1px solid rgba(235, 137, 76, 0.9);
+}
+
+.datePicker .grid .heading {
+    width: 210px;
+    border-bottom: 1px solid #ccc;
+    background: linear-gradient(to top, #ececec, #F6F6F6);
+}
+
+.datePicker .grid li {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    font: 12px/2 "Open Sans", Sans-Serif;
+    cursor: default;
+}
+
+.datePicker .grid .days li:hover {
+    background-color: #F1B692;
+    cursor: pointer;
+}
+
+.datePicker .grid .days .other {
+    color: #aaa;
+}

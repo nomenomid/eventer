@@ -1,0 +1,405 @@
+.timePicker {
+    position: relative;
+    display: inline-block;
+    height: 25px;
+}
+
+.timePicker,
+.timePicker * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.timePicker .icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: #eb5c03;
+    height: 100%;
+    width: 25px;
+    font-size: 18px;
+    margin-top: -10px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    opacity: 0.5;
+}
+
+.timePicker .icon:before {
+    content:"\e023";
+    font-family: "Glyphicons Halflings";
+}
+
+.timePicker .icon:hover {
+    opacity: 0.75;
+}
+
+.timePicker.show .icon {
+    opacity: 1;
+}
+
+.timePicker input {
+    height: 100%;
+    width: 72px;
+    font: 14px/25px Lato, Sans-Serif;
+    padding: 0 0 0 5px;
+    outline: 0;
+    color: #6e6e6e;
+    margin-right: 25px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.timePicker .clockHolder {
+    background-color: #fafafa;
+    position: absolute;
+    margin-top: 1px;
+    border: 1px solid #ccc;
+    right: 0;
+    outline: 0;
+    width: 170px;
+    height: 200px;
+    padding-top: 40px;
+    display: none;
+}
+
+.timePicker.show .clockHolder {
+    display: block;
+}
+
+.timePicker .clockHolder header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 40px;
+}
+
+.timePicker .clockHolder header button {
+    display: inline-block;
+    height: 20px;
+    margin: 10px 2px;
+    font: 10px/1 Lato, Sans-Serif;
+    padding: 0 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: linear-gradient(to top, #ccc, #eee);
+    outline: 0;
+}
+
+.timePicker .clockHolder header button[disabled] {
+    background: linear-gradient(to top, #bbb, #ddd);
+}
+
+.timePicker .clockHolder header button:not([disabled]):hover {
+    background: linear-gradient(to top, #ddd, #fff);
+}
+
+.timePicker .clockHolder header button.selected {
+    background: linear-gradient(to top, #ddd, #fff);
+}
+
+.timePicker .clockHolder header span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.timePicker .clockWrapper {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(235, 137, 76, 0.9);
+    border-radius: 3px;
+}
+
+.timePicker .clockHolder .clock {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 5px;
+    border: 3px solid #585858;
+    border-radius: 100%;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+}
+
+.timePicker .numbers {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    border-radius: 100%;
+}
+
+.timePicker .numbers > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.timePicker .numbers > label > span {
+    font: 13px/20px Lato;
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    left: 50%;
+    top: -40%;
+    margin-left: -10px;
+    margin-top: -5px;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.timePicker .numbers > label > span:hover {
+    font-weight: bold;
+}
+
+.timePicker .numbers > label:nth-of-type(2) {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.timePicker .numbers > label:nth-of-type(2) > span {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.timePicker .numbers > label:nth-of-type(3) {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.timePicker .numbers > label:nth-of-type(3) > span {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.timePicker .numbers > label:nth-of-type(4) {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.timePicker .numbers > label:nth-of-type(4) > span {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.timePicker .numbers > label:nth-of-type(5) {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+
+.timePicker .numbers > label:nth-of-type(5) > span {
+    -webkit-transform: rotate(-120deg);
+    transform: rotate(-120deg);
+}
+
+.timePicker .numbers > label:nth-of-type(6) {
+    -webkit-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+
+.timePicker .numbers > label:nth-of-type(6) > span {
+    -webkit-transform: rotate(-150deg);
+    transform: rotate(-150deg);
+}
+
+.timePicker .numbers > label:nth-of-type(7) {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.timePicker .numbers > label:nth-of-type(7) > span {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.timePicker .numbers > label:nth-of-type(8) {
+    -webkit-transform: rotate(-150deg);
+    transform: rotate(-150deg);
+}
+
+.timePicker .numbers > label:nth-of-type(8) > span {
+    -webkit-transform: rotate(150deg);
+    transform: rotate(150deg);
+}
+
+.timePicker .numbers > label:nth-of-type(9) {
+    -webkit-transform: rotate(-120deg);
+    transform: rotate(-120deg);
+}
+
+.timePicker .numbers > label:nth-of-type(9) > span {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
+
+.timePicker .numbers > label:nth-of-type(10) {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.timePicker .numbers > label:nth-of-type(10) > span {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.timePicker .numbers > label:nth-of-type(11) {
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.timePicker .numbers > label:nth-of-type(11) > span {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.timePicker .numbers > label:nth-of-type(12) {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.timePicker .numbers > label:nth-of-type(12) > span {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.timePicker .hands {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    pointer-events: none;
+}
+
+.timePicker .hands,
+.timePicker .hands * {
+    pointer-events: none;
+}
+
+.timePicker .hands:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #424242;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -4px;
+    z-index: 100;
+}
+
+.timePicker .hands .hour,
+.timePicker .hands .minute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    z-index: 99;
+    -webkit-transition: -webkit-transform linear 0.3s;
+    transition: transform linear 0.3s;
+}
+
+.timePicker .hands .hour:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 85%;
+    background-color: #424242;
+    left: 50%;
+    margin-left: -1px;
+    top: -20%;
+}
+
+.timePicker .hands .minute.dim,
+.timePicker .hands .hour.dim {
+    z-index: 98;
+}
+
+.timePicker .hands .minute.dim:before,
+.timePicker .hands .hour.dim:before {
+    background-color: #ccc;
+}
+
+.timePicker .hands .minute:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #424242;
+    left: 50%;
+    margin-left: -1px;
+    top: -35%;
+}
+
+.timePicker .hands .hour.hide,
+.timePicker .hands .minute.hide {
+    display: none;
+}
+
+.timePicker .meridiemsHolder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.7);
+    z-index: 1000;
+    display: none;
+}
+
+.timePicker .meridiemsHolder.show {
+    display: block;
+}
+
+.timePicker .meridiemsHolder button {
+    position: absolute;
+    box-sizing: content-box;
+    top: 50%;
+    margin-top: -12px;
+    margin-left: 5px;
+    left: 50%;
+    font: 12px/1 Lato, Sans-Serif;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: linear-gradient(to top, #d8d8d8, #f8f8f8);
+    vertical-align: top;
+    outline: 0;
+}
+
+.timePicker .meridiemsHolder button:first-of-type {
+    right: 50%;
+    left: auto;
+    margin-right: 5px;
+}
+
+.timePicker .meridiemsHolder button:hover {
+    background: linear-gradient(to top, #ddd, #fff);
+}

@@ -1,0 +1,29 @@
+{
+    "name": "event-scheduler",
+    "version": "0.0.1",
+    "description": "A very basic event scheduling system",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"    
+    },
+    "dependencies": {
+        "mongoose": "~4.1.7",
+        "express": "~4.13.0",
+        "body-parser": "~1.14.0"
+    },
+    "engines": {
+        "node": "~0.12.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nomenomid/technical.exercises"
+    },
+    "keywords": [
+        "node",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Backbone"
+    ],
+    "license": "GPL"
+}
